@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Header, Title, Body } from "native-base";
+import { Header, Title, Body } from 'native-base';
 
 export default class AppHeader extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class AppHeader extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'rgba(255, 255, 255, 0.25)'
+    backgroundColor: '#d63b0f'
   },
   title: {
     marginLeft: 15
