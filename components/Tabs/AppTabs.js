@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Container, Tab, Tabs, ScrollableTab, Text, TabHeading, Icon } from 'native-base';
+import { Container, Tab, Tabs, ScrollableTab, Text, TabHeading } from 'native-base';
 
 export default class AppTabs extends Component {
   render() {
@@ -59,11 +59,10 @@ const styles = StyleSheet.create({
   },
   scrollableTab: {
     backgroundColor: 'transparent',
-    borderBottomColor: 'transparent',
-    height: 65
+    borderBottomColor: 'transparent'
   },
   heading: {
-    backgroundColor: 'transparent',
+    backgroundColor: 'rgba(255, 255, 255, 0.25)',
     color: 'white'
   },
   tab: {

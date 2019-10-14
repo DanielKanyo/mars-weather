@@ -16,8 +16,7 @@ export default class AppHeader extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255, 255, 255, 0.25)'
+    backgroundColor: 'rgba(255, 255, 255, 0.25)'
   },
   title: {
     marginLeft: 15

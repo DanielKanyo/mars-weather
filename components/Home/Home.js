@@ -8,7 +8,7 @@ import AppTabs from '../Tabs/AppTabs';
 export default class Home extends Component {
   render() {
     return (
-      <ImageBackground source={require('../../assets/marsbg.jpg')} style={{ width: '100%', height: '100%' }}>
+      <ImageBackground source={require('../../assets/marsbg.jpg')} style={styles.background}>
         <AppHeader />
         <Container style={styles.container}>
           <AppTabs />
@@ -19,6 +19,10 @@ export default class Home extends Component {
 }
 
 const styles = StyleSheet.create({
+  background: {
+    width: '100%',
+    height: '100%'
+  },
   container: {
     flex: 1,
     backgroundColor: 'transparent',
