@@ -19,7 +19,7 @@ export default class AppTabs extends Component {
     try {
       const response = await fetch(`https://api.nasa.gov/insight_weather/?api_key=${apiKey}&feedtype=json&ver=1.`);
       const responseJson = await response.json();
-
+      
       this.setState({
         isLoading: false,
         weatherData: responseJson,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   scrollableTab: {
-    backgroundColor: 'transparent',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
     borderBottomColor: 'transparent',
     height: 'auto',
     padding: 0
