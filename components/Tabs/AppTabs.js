@@ -45,7 +45,10 @@ export default class AppTabs extends Component {
           }
           style={styles.tab}
         >
-          <AppTabContent sol={key} />
+          <AppTabContent
+            sol={key}
+            dateUTC={weatherData[key].First_UTC}
+          />
         </Tab>
       )
     });
@@ -53,7 +56,7 @@ export default class AppTabs extends Component {
     return (
       <Container style={styles.container}>
         <Tabs renderTabBar={() => <ScrollableTab style={styles.scrollableTab} />}>
-          {tabContent}
+          {tabContent.reverse()}
         </Tabs >
       </Container >
     );
@@ -65,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   scrollableTab: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
     borderBottomColor: 'transparent',
     height: 'auto',
     padding: 0

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
-import { Container, Text } from 'native-base';
+import { Container } from 'native-base';
 
 import AppHeader from '../Header/AppHeader';
 import AppTabs from '../Tabs/AppTabs';
@@ -27,8 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'transparent',
     alignItems: 'center',
-    justifyContent: 'center',
-    fontFamily: 'Roboto',
+    justifyContent: 'center'
   },
   text: {
     color: 'white',
