@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import * as Font from 'expo-font';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { AppLoading } from 'expo';
 
 import Home from './components/Home/Home';
@@ -19,6 +19,7 @@ export default class App extends Component {
       Roboto: require('native-base/Fonts/Roboto.ttf'),
       Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
       ...Ionicons.font,
+      ...MaterialCommunityIcons.font,
     });
     this.setState({ isReady: true });
   }

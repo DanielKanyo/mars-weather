@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Container, Card, CardItem, Body, Text } from 'native-base';
+import { Container, Card, CardItem, Body, Text, Icon } from 'native-base';
 import moment from 'moment';
 
 export default class AppTabContent extends Component {
@@ -9,12 +9,18 @@ export default class AppTabContent extends Component {
 
     return (
       <Container style={styles.container}>
-        <Card style={styles.card}>
+        <Card>
           <CardItem style={styles.cardItem}>
             <Body style={styles.contentHeader}>
-              <Text style={styles.text}>Sol {sol}</Text>
-              <View style={styles.hr} />
-              <Text style={styles.text}>{moment(dateUTC).format('MMM D')}</Text>
+              <View>
+                <Icon name='ios-snow' style={{fontSize: 40, color: '#241721'}} />
+              </View>
+              <View style={styles.divider} />
+              <View>
+                <Text style={styles.text}>Sol {sol}</Text>
+                <View style={styles.hr} />
+                <Text style={styles.text}>{moment(dateUTC).format('MMM D')}</Text>
+              </View>
             </Body>
           </CardItem>
         </Card>
@@ -33,12 +39,10 @@ const styles = StyleSheet.create({
   contentHeader: {
     height: 90,
     display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     backgroundColor: 'transparent'
-  },
-  card: {
-    backgroundColor: 'rgba(255, 255, 255, 0.7)'
   },
   cardItem: {
     backgroundColor: 'transparent'
@@ -48,5 +52,10 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#241721'
+  },
+  divider: {
+    height: '50%',
+    width: 1,
+    backgroundColor: 'rgba(36, 23, 33, 0.15)'
   }
 });
