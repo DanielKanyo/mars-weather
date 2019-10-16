@@ -55,7 +55,10 @@ export default class AppTabs extends Component {
 
     return (
       <Container style={styles.container}>
-        <Tabs renderTabBar={() => <ScrollableTab style={styles.scrollableTab} />}>
+        <Tabs
+          tabBarUnderlineStyle={styles.tabUnderLine}
+          renderTabBar={() => <ScrollableTab style={styles.scrollableTab} />}
+        >
           {tabContent.reverse()}
         </Tabs >
       </Container >
@@ -68,10 +71,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   scrollableTab: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#f0f0f0',
     borderBottomColor: 'transparent',
+    borderBottomWidth: 0,
     height: 'auto',
     padding: 0
+  },
+  tabUnderLine: {
+    backgroundColor: '#241721'
   },
   heading: {
     backgroundColor: 'transparent',
@@ -87,6 +94,6 @@ const styles = StyleSheet.create({
     padding: 18
   },
   text: {
-    color: 'white'
+    color: '#241721'
   }
 });
