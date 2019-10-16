@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Text, Container } from 'native-base';
+import { Container, Card, CardItem, Body, Text } from 'native-base';
 import moment from 'moment';
 
 export default class AppTabContent extends Component {
   render() {
     const { sol, dateUTC } = this.props;
 
-    console.log(dateUTC);
-
     return (
       <Container style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.text}>Sol {sol}</Text>
-          <View style={styles.hr} />
-          <Text style={styles.text}>{moment(dateUTC).format('MMMM D, YYYY')}</Text>
-        </View>
+        <Card style={styles.card}>
+          <CardItem style={styles.cardItem}>
+            <Body style={styles.contentHeader}>
+              <Text style={styles.text}>Sol {sol}</Text>
+              <View style={styles.hr} />
+              <Text style={styles.text}>{moment(dateUTC).format('MMM D')}</Text>
+            </Body>
+          </CardItem>
+        </Card>
       </Container>
     );
   }
@@ -28,19 +30,23 @@ const styles = StyleSheet.create({
     padding: 22,
     backgroundColor: 'transparent'
   },
-  header: {
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+  contentHeader: {
     height: 90,
-    borderRadius: 5,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: 'transparent'
   },
-  text: {
-    color: 'white',
-    fontSize: 20
+  card: {
+    backgroundColor: 'rgba(255, 255, 255, 0.7)'
+  },
+  cardItem: {
+    backgroundColor: 'transparent'
   },
   hr: {
-    margin: 4
+    margin: 2
+  },
+  text: {
+    color: '#241721'
   }
 });

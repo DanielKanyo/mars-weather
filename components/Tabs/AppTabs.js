@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   scrollableTab: {
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    backgroundColor: 'transparent',
     borderBottomColor: 'transparent',
     height: 'auto',
     padding: 0

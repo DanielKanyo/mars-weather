@@ -5,7 +5,7 @@ import { Header, Title, Body } from 'native-base';
 export default class AppHeader extends Component {
   render() {
     return (
-      <Header transparent style={styles.header}>
+      <Header transparent>
         <Body>
           <Title style={styles.title}>Mars Weather</Title>
         </Body>
@@ -15,9 +15,6 @@ export default class AppHeader extends Component {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: 'rgba(255, 255, 255, 0.3)'
-  },
   title: {
     marginLeft: 15
   }
