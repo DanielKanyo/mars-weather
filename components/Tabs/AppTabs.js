@@ -19,7 +19,7 @@ export default class AppTabs extends Component {
     try {
       const response = await fetch(`https://api.nasa.gov/insight_weather/?api_key=${apiKey}&feedtype=json&ver=1.`);
       const responseJson = await response.json();
-      
+
       this.setState({
         isLoading: false,
         weatherData: responseJson,
@@ -48,6 +48,7 @@ export default class AppTabs extends Component {
           <AppTabContent
             sol={key}
             dateUTC={weatherData[key].First_UTC}
+            season={weatherData[key].Season}
           />
         </Tab>
       )
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     borderBottomColor: 'transparent',
     borderBottomWidth: 0,
     height: 'auto',
-    padding: 0
+    padding: 0,
   },
   tabUnderLine: {
     backgroundColor: '#241721'

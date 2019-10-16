@@ -10,10 +10,12 @@ export default class AppHeader extends Component {
         <View style={styles.statusBarPlaceholder} />
         <Header style={styles.header}>
           <Left>
-            <Icon style={[styles.icon, styles.headerIcon]} name='md-cloudy' />
+            <Button transparent>
+              <Icon style={styles.icon} name='md-cloudy' />
+            </Button>
           </Left>
           <Body>
-          <Title style={styles.title}>Mars Weather</Title>
+            <Title style={styles.title}>Mars Weather</Title>
           </Body>
           <Right>
             <Button transparent>

@@ -11,7 +11,7 @@ export default class Home extends Component {
     return (
       <ImageBackground source={require('../../assets/marsbg.jpg')} style={styles.backgroundImage}>
         <LinearGradient
-          colors={['rgba(204, 30, 44, 0.8)', 'rgba(116, 22, 48, 0.8)', 'rgba(64, 21, 42, 0.8)']}
+          colors={['rgba(204, 30, 44, 0.85)', 'rgba(116, 22, 48, 0.85)', 'rgba(64, 21, 42, 0.85)']}
           style={styles.linearGradient}
         >
           <AppHeader />
